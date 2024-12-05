@@ -60,13 +60,13 @@ export function AppSidebar() {
           <NavUser user={user} />
         </SidebarHeader>
         <SidebarSeparator />
-        {navLinks.map((nav) => (
-          <SidebarGroup>
+        {navLinks.map((nav, navIndex) => (
+          <SidebarGroup key={navIndex}>
             <SidebarGroupLabel>{nav.group_name}</SidebarGroupLabel>
             <SidebarGroupContent>
               <SidebarMenu>
-                {nav.items.map((link) => (
-                  <SidebarMenuItem key={link.title}>
+                {nav.items.map((link, linkIndex) => (
+                  <SidebarMenuItem key={linkIndex}>
                     <SidebarMenuButton asChild isActive={url.startsWith(link.url)}>
                       <Link href={link.url}>
                         <link.icon />
