@@ -16,7 +16,8 @@
     // path alias
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./resources/js/*"]
+      "@/*": ["./resources/js/*"],
+      "ziggy-js": ["./vendor/tightenco/ziggy"]
     }
   },
   "exclude": ["node_modules"],
