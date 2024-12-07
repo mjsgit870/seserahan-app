@@ -6,21 +6,8 @@
     <link rel="manifest" href="/manifest.json">
     @vite(['resources/css/app.css', 'resources/js/app.tsx'])
     @inertiaHead
-    {{-- Service Worker --}}
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/service-worker.js')
-            .then((registration) => {
-              console.log('Service Worker registered successfully:', registration.scope);
-            })
-            .catch((error) => {
-              console.log('Service Worker registration failed:', error);
-            });
-        });
-      }
-
-    </script>
+    <script src="/sw-register.js"></script>
+    @routes
   </head>
   <body style="font-family: 'Inter', sans-serif;">
     @inertia
