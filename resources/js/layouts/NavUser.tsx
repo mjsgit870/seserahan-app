@@ -24,6 +24,7 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar"
+import { Link } from "@inertiajs/react"
 
 interface NavUserProps {
   user: {
@@ -73,9 +74,11 @@ export function NavUser({
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
-            <DropdownMenuItem className="text-destructive focus:text-destructive cursor-pointer">
-              <LogOut />
-              Log out
+            <DropdownMenuItem className="text-destructive focus:text-destructive cursor-pointer" asChild>
+              <Link href={route("logout")}>
+                <LogOut />
+                Log out
+              </Link>
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
