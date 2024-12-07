@@ -9,6 +9,7 @@ Route::controller(Controllers\AuthController::class)->group(function () {
     Route::post('/login', 'login_post')->name('login.post');
     Route::get('/register', 'register')->name('register');
     Route::post('/register', 'register_post')->name('register.post');
+    Route::get('/logout', 'logout')->name('logout');
 });
 
 Route::resource('seserahan', Controllers\SeserahanController::class);
