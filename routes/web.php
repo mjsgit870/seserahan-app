@@ -13,5 +13,5 @@ Route::controller(Controllers\AuthController::class)->group(function () {
 });
 
 Route::resource('seserahan', Controllers\SeserahanController::class);
-Route::resource('satuan', Controllers\SatuanController::class);
+// Route::resource('satuan', Controllers\SatuanController::class);
 Route::resource('users', Controllers\UserController::class);

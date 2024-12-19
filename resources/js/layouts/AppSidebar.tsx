@@ -25,11 +25,6 @@ const navLinks = [
         url: "/seserahan",
         icon: ChartBar,
       },
-      {
-        title: "Master Satuan",
-        url: "/satuan",
-        icon: Boxes,
-      }
     ]
   },
   {
