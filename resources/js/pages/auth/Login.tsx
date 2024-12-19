@@ -55,7 +55,12 @@ export default function LoginPage() {
                 value={form.data.password}
                 onChange={(e) => form.setData('password', e.target.value)}
               />
-              <Button variant={"outline"} size={"icon"} onClick={() => setShowPassword(!showPassword)} className="flex-shrink-0">
+              <Button 
+                variant={"outline"} 
+                size={"icon"} 
+                onClick={() => setShowPassword(!showPassword)} 
+                className="flex-shrink-0"
+              >
                 {showPassword ? <EyeOff /> : <Eye />}
               </Button>
             </div>
