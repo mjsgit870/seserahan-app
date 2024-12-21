@@ -2,7 +2,6 @@
 
 use App\Http\Controllers;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 
 Route::controller(Controllers\AuthController::class)->group(function () {
     Route::get('/login', 'login')->name('login');
@@ -12,6 +11,7 @@ Route::controller(Controllers\AuthController::class)->group(function () {
     Route::get('/logout', 'logout')->name('logout');
 });
 
+// seserahan
 Route::resource('seserahan', Controllers\SeserahanController::class);
-// Route::resource('satuan', Controllers\SatuanController::class);
+// users
 Route::resource('users', Controllers\UserController::class);
